@@ -1,0 +1,379 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  background-color: #26335D;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #26335D;
+  padding: 20px 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  border: 1px solid transparent;
+}
+.btn.primary {
+  background-color: #27e006;
+}
+
+/* HERO */
+#hero {
+  padding: 80px 0;
+  background-color: #26335D;
+  color: white;
+}
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.hero-text {
+  max-width: 50%;
+}
+.welcome {
+  color: #3EB3C2;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.subtext {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+.cta {
+  padding: 12px 24px;
+  border-radius: 5px;
+  background-color: #27e006;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cta.outline {
+  background-color: transparent;
+  border: 2px solid #3EB3C2;
+  color: #3EB3C2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+body {
+  background-color: #fdfeff;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #26335D;
+  padding: 20px 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  border: 1px solid transparent;
+}
+.btn.primary {
+  background-color: #27e006;
+}
+
+/* HERO */
+#hero {
+  padding: 80px 0;
+}
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.hero-text {
+  max-width: 50%;
+}
+.welcome {
+  color: #3EB3C2;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.subtext {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+.cta {
+  padding: 12px 24px;
+  border-radius: 5px;
+  background-color: #27e006;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cta.outline {
+  background-color: transparent;
+  border: 2px solid #3EB3C2;
+  color: #3EB3C2;
+}
+.hero-visuals {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 300px;
+}
+.main-img {
+  width: 425px;
+  height: 325px;
+  border-radius: 10px;
+}
+
+/* LIGHT SECTIONS */
+.appointment,
+.doctors {
+  background-color:white;
+  color: #222;
+  padding: 60px 0;
+}
+.section-label {
+  color: #27e006;
+  font-weight: 600;
+  text-align: center;
+}
+.section-description {
+  color: #555;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.appointment h2,
+.doctors h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* APPOINTMENT CARDS */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.card img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+.card.highlight {
+  background-color: #27e006;
+  color: white;
+  
+}
+
+
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.doctor-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: 0.3s;
+}
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.image-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #EF5872;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.actions {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.actions i {
+  cursor: pointer;
+  color: #222;
+}
+.info {
+  padding: 20px;
+}
+.category {
+  color: #27e006;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.info h3 {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+.sales, .price, .rating {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.price del {
+  color: #999;
+}
+.price span {
+  color: #6c63ff;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.rating {
+  color: #f7c948;
+}
+.learn-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid #27e006;
+  color: #27e006;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.learn-btn:hover {
+  background-color: #27e006;
+  color: white;
+}
+
