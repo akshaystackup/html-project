@@ -255,13 +255,25 @@ header {
   margin-top: 30px;
 }
 .card {
+  width: 23%;
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
+  flex: 1 1 22%;
+  max-width: 22%;
+  box-sizing: border-box;
   width: 220px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+.card:hover{
+ 
+      background-color: green;
+      color: white;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+} 
+
 .card img {
   width: 40px;
   margin-bottom: 10px;
@@ -377,3 +389,175 @@ header {
   color: white;
 }
 
+
+  #advice {
+    padding: 80px 20px;
+    background-color: #ffffff;
+  }
+
+  .advice-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .advice-tag {
+    color: #3EB3C2;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .advice-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #252b42;
+  }
+
+  .advice-subtext {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 20px;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex: 1;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .card-img {
+    position: relative;
+  }
+
+  .card-img img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icons button {
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+.icons button:hover{
+      background-color: black; /* slightly darker teal */
+      color: white;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+}
+  .card-content {
+    padding: 20px;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .category {
+    color: #3EB3C2;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 15px;
+  }
+
+  .sales {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 5px;
+  }
+
+  .price {
+    font-size: 0.95rem;
+    color: #999;
+    margin-bottom: 15px;
+  }
+
+  .discount {
+    color: #2DC071;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+
+ .learn-btn {
+  text-decoration: none;
+  color: #3EB3C2;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: auto;
+  border: 2px solid #3EB3C2;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-btn:hover {
+  background-color: #3EB3C2;
+  color: white;
+}
+
+
+  .rating {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background:#26335D;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  .star{
+    color: gold;
+  }
