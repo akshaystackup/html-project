@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +6,9 @@
 
 /* GLOBAL */
 body {
-  background-color: #26335D;
-  color: #ffffff;
+  background-color: #fdfeff; /* Changed from #26335D to match hero background color */
   font-family: 'Montserrat', sans-serif;
+  color: #252b42; /* Changed for better contrast on light sections */
 }
 .container {
   max-width: 1200px;
@@ -30,7 +29,7 @@ header {
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
-
+  color: white; /* Ensure logo color is white on dark header */
 }
 .nav-links {
   display: flex;
@@ -41,6 +40,13 @@ header {
   text-decoration: none;
   font-weight: 500;
 }
+
+.nav-links a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
 .nav-actions {
   display: flex;
   gap: 15px;
@@ -60,8 +66,8 @@ header {
 /* HERO */
 #hero {
   padding: 80px 0;
-  background-color: #26335D;
-  color: white;
+  background-color: #26335D; /* Set hero background to dark blue */
+  color: white; /* Ensure text is white on dark hero */
 }
 .hero-container {
   display: flex;
@@ -100,132 +106,39 @@ header {
   font-weight: 600;
   text-decoration: none;
 }
-.cta.outline {
-  background-color: transparent;
-  border: 2px solid #3EB3C2;
-  color: #3EB3C2;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* GLOBAL */
-body {
-  background-color: #fdfeff;
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* HEADER */
-header {
-  background-color: #26335D;
-  padding: 20px 0;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-.nav-actions {
-  display: flex;
-  gap: 15px;
-}
-.btn {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 600;
-  color: white;
-  border: 1px solid transparent;
-}
-.btn.primary {
-  background-color: #27e006;
-}
-
-/* HERO */
-#hero {
-  padding: 80px 0;
-}
-.hero-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-.hero-text {
-  max-width: 50%;
-}
-.welcome {
-  color: #3EB3C2;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-.subtext {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-.cta {
-  padding: 12px 24px;
-  border-radius: 5px;
-  background-color: #27e006;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
+.cta:hover {
+  background-color: white;
+  color: rgb(9, 238, 51);
+  cursor: pointer;
 }
 .cta.outline {
   background-color: transparent;
   border: 2px solid #3EB3C2;
   color: #3EB3C2;
+}
+.cta.outline:hover {
+  background-color: white;
+  color: green;
+  cursor: pointer;
 }
 .hero-visuals {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  min-width: 300px;
+  min-width: 300px; /* Ensures image has a minimum width */
 }
 .main-img {
   width: 425px;
   height: 325px;
   border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
-/* LIGHT SECTIONS */
+/* LIGHT SECTIONS (Appointment and Doctors) */
 .appointment,
-.doctors {
-  background-color:white;
-  color: #222;
+.doctors-section { /* Added doctors-section here for consistent background */
+  background-color: white;
+  color: #252b42; /* Dark text for light sections */
   padding: 60px 0;
 }
 .section-label {
@@ -240,10 +153,11 @@ header {
   margin-bottom: 40px;
 }
 .appointment h2,
-.doctors h2 {
+.doctors-section h2 { /* Targeting h2 in these sections */
   font-size: 2rem;
   text-align: center;
   margin: 10px 0;
+  color: #252b42; /* Ensure headings are dark */
 }
 
 /* APPOINTMENT CARDS */
@@ -255,281 +169,186 @@ header {
   margin-top: 30px;
 }
 .card {
-  width: 23%;
   background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  flex: 1 1 22%;
-  max-width: 22%;
+  flex: 1 1 22%; /* Allows cards to grow/shrink, with a base of 22% width */
+  max-width: 22%; /* Ensures no card takes more than 22% */
   box-sizing: border-box;
-  width: 220px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added transition */
 }
-.card:hover{
- 
-      background-color: green;
-      color: white;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      cursor: pointer;
-} 
-
+.card:hover {
+  background-color: #27e006; /* Green on hover */
+  color: white;
+  cursor: pointer;
+}
 .card img {
   width: 40px;
   margin-bottom: 10px;
 }
-.card.highlight {
-  background-color: #27e006;
-  color: white;
-  
+.card h3 {
+    color: #252b42; /* Ensure heading color for appointment cards is dark */
+}
+.card p {
+    color: #555; /* Ensure paragraph color for appointment cards is dark */
+}
+.card:hover h3,
+.card:hover p {
+    color: white; /* Change text color to white on hover */
 }
 
 
 
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+/* ADVICE SECTION */
+#advice {
+  padding: 80px 20px;
+  background-color: #ffffff;
 }
-.doctor-card {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  width: 260px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: 0.3s;
+
+.advice-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center; /* Center align section label, title, and subtext */
 }
-.doctor-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-.image-wrapper {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: #EF5872;
-  color: white;
-  padding: 5px 10px;
-  font-size: 0.75rem;
-  border-radius: 5px;
+
+.advice-tag {
+  color: #3EB3C2;
   font-weight: 600;
-}
-.actions {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-.actions i {
-  cursor: pointer;
-  color: #222;
-}
-.info {
-  padding: 20px;
-}
-.category {
-  color: #27e006;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-.info h3 {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-.desc {
-  font-size: 0.9rem;
-  color: #555;
   margin-bottom: 10px;
 }
-.sales, .price, .rating {
-  font-size: 0.9rem;
+
+.advice-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #252b42;
+}
+
+.advice-subtext {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto; /* Center the subtext block */
+  margin-right: auto; /* Center the subtext block */
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards within the container */
+}
+
+.advice-card { /* RENAMED FROM .card */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex: 1 1 calc(25% - 20px); /* Adjust to allow 4 cards per row with gap */
+  max-width: calc(25% - 20px); /* Max width for 4 cards per row */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.advice-card .card-img {
+  position: relative;
+  min-height: 200px; /* Ensure images have a consistent height */
+  overflow: hidden;
+}
+
+.advice-card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.advice-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e74c3c;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.advice-card .icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.advice-card .icons button {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.advice-card .icons button:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.advice-card .card-content {
+  padding: 20px;
+  flex-grow: 1;
+  position: relative;
+  text-align: left; /* Align text within card content to left */
+}
+
+.advice-card .category {
+  color: #3EB3C2;
+  font-weight: 600;
+  font-size: 0.95rem;
   margin-bottom: 5px;
 }
-.price del {
+
+.advice-card .card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #252b42; /* Ensure heading color is dark */
+}
+
+.advice-card .desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.advice-card .sales {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.advice-card .price {
+  font-size: 0.95rem;
   color: #999;
-}
-.price span {
-  color: #6c63ff;
-  font-weight: 600;
-  margin-left: 5px;
-}
-.rating {
-  color: #f7c948;
-}
-.learn-btn {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: transparent;
-  border: 1px solid #27e006;
-  color: #27e006;
-  padding: 8px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.learn-btn:hover {
-  background-color: #27e006;
-  color: white;
+  margin-bottom: 15px;
 }
 
-
-  #advice {
-    padding: 80px 20px;
-    background-color: #ffffff;
-  }
-
-  .advice-container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .advice-tag {
-    color: #3EB3C2;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  .advice-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    color: #252b42;
-  }
-
-  .advice-subtext {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 600px;
-  }
-
-  .cards {
-    display: flex;
-    gap: 20px;
-
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    overflow: hidden;
-    flex: 1;
-    max-width: 32%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .card-img {
-    position: relative;
-  }
-
-  .card-img img {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #e74c3c;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 0.75rem;
-    border-radius: 3px;
-    font-weight: 600;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .icons button {
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-.icons button:hover{
-      background-color: black; /* slightly darker teal */
-      color: white;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      cursor: pointer;
+.advice-card .discount {
+  color: #2DC071;
+  font-weight: 700;
+  margin-left: 10px;
 }
-  .card-content {
-    padding: 20px;
-    flex-grow: 1;
-    position: relative;
-  }
 
-  .category {
-    color: #3EB3C2;
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 5px;
-  }
-
-  .card-content h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-  .desc {
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 15px;
-  }
-
-  .sales {
-    font-size: 0.85rem;
-    color: #888;
-    margin-bottom: 5px;
-  }
-
-  .price {
-    font-size: 0.95rem;
-    color: #999;
-    margin-bottom: 15px;
-  }
-
-  .discount {
-    color: #2DC071;
-    font-weight: 700;
-    margin-left: 10px;
-  }
-
- .learn-btn {
+.advice-card .learn-btn {
   text-decoration: none;
   color: #3EB3C2;
   font-weight: 600;
@@ -541,23 +360,425 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.learn-btn:hover {
+.advice-card .learn-btn:hover {
   background-color: #3EB3C2;
   color: white;
 }
 
+.advice-card .rating {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background:#26335D;
+  color: white; /* Added for visibility against dark background */
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+.advice-card .star {
+  color: gold;
+}
 
-  .rating {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background:#26335D;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+/* Responsive Design (Optional, but recommended) */
+@media (max-width: 992px) {
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
   }
-  .star{
-    color: gold;
+  .hero-visuals {
+    justify-content: center;
   }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .advice-card {
+    max-width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .subtext {
+    font-size: 1rem;
+  }
+  .card-container,
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card,
+  .advice-card {
+    max-width: 90%; /* Adjust width for single column */
+    width: 100%; /* Take full width on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .cta {
+    padding: 10px 18px;
+  }
+  .main-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.reference-section{
+  background-color: #1b2d55;
+  padding: 100px 20px;
+
+}
+.reference-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+}
+
+.image-box{
+  position: relative;
+}
+.main-img img{
+  width: 350px;;
+  height: 350px;;
+  border: radius 10px; 
+  ;
+}
+.text-box {
+  max-width: 500px;
+  color: #ffffff;
+}
+.red-line{
+  background-color:#ff4b4b;
+  margin-bottom: 20px;
+  width: 40px;
+  height: 5px;
+}
+.title{
+  font-size: 32px;
+   font-weight: 700;
+  margin-bottom:20px;
+  
+}
+.description{
+  font-size: 14px;
+  color:#b0b6c3;
+  line-height: 1;
+}
+.learn-more {
+  font-weight: 600;
+  color: #28cc8b;
+text-decoration: none;
+}
+.learn-more:hover {
+  color: rgb(64, 231, 13);
+  cursor: pointer;
+}
+.learn-more i {
+  margin-left: 6px;
+}
+
+.pricing-section{
+  background-color: #ffff;
+  padding: 80px 20px;
+  font-family:'Montserrat',sans-serif;
+}
+.pricing-tag {
+  color: #28cc8b;
+  font-weight: 600;
+}
+.pricing-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin: 10px 0;
+}
+.pricing-subtext {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.pricing-cards{
+  background: #fff;
+  display: flex;
+  justify-content:center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 12px;
+
+  position: relative;
+}
+.pricing-card {
+  background: #fff;
+   display: flex;
+  justify-content: center;
+   gap: 30px; /* ⬅️ This adds spacing between the cards */
+  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+  margin-top: 40px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.icon{
+  font-size: 40px;
+  color: #5f5dff ;
+  margin-bottom: 20px;
+}
+.price {
+  font-size: 30px;
+  color: #28cc8b;
+  margin: 15px 0;
+}
+.price span {
+  font-size: 14px;
+  color: #333;
+}
+
+.note {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.btn{
+  background-color:#28cc8b ;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.btn:hover{
+  background-color:white; /* Green on hover */
+  color: green;
+  cursor: pointer;
+  
+}
+.btn.btn.primary:hover{
+  background-color:white; /* Green on hover */
+  color: green;
+  cursor: pointer;
+  
+}
+.features {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.features li {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.green {
+  color: #28cc8b;
+  margin-right: 8px;
+}
+.grey {
+  color: #bbb;
+  margin-right: 8px;
+}
+.badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: #f25c2b;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.highlight {
+  transform: scale(1.05);
+  z-index: 2;
+}
+.testimonials-section {
+  padding: 80px 20px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.testimonials-tag {
+  color: #28cc8b;
+  font-weight: 600;
+}
+
+.testimonials-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #252b42;
+  margin: 10px 0;
+}
+
+.testimonials-subtext {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.experts {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.expert-card {
+  max-width: 300px;
+}
+
+.expert-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.expert-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: gold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.expert-name {
+  font-weight: 700;
+  color: #252b42;
+}
+
+.expert-role {
+  font-size: 14px;
+  color: #888;
+}
+
+
+.newsletter-section {
+  background-color: #26335D;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+.newsletter-tag {
+  color: #28cc8b;
+  font-weight: 600;
+}
+.newsletter-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.newsletter-subtext {
+  color: #ccc;
+  font-size: 14px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin:0 auto;
+}
+.newsletter-form input {
+flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-size: 14px;
+}
+.newsletter-form button {
+  background-color: #28cc8b;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+
+}
+.newsletter-form button:hover {
+  background-color: rgb(83, 233, 86);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 60px 20px 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+.contact-info i {
+  margin-right: 8px;
+  color: #28cc8b;
+}
+.footer-bottom {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.social-icons i {
+  font-size: 18px;
+  color: #28cc8b;
+  margin: 0 8px;
+  cursor: pointer;
+}

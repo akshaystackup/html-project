@@ -6,26 +6,31 @@
   <title>MedicalBetter</title>
   <link rel="stylesheet" href="style.css" />
   <link
-  rel="stylesheet"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
- 
- 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="mediaquery.css" />
+</head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="navbar container">
       <h2 class="logo">MedicalBetter</h2>
-      <nav class="nav-links">
+
+      <!-- Hamburger icon -->
+<div class="hamburger" id="hamburger">&#9776;</div>
+
+
+  <!-- Nav links (toggleable) -->
+
+      <nav class="nav-links" id="navMenu">
         <a href="#">Home</a>
         <a href="#">Product</a>
         <a href="#">Pricing</a>
         <a href="#">Contact</a>
       </nav>
+
+      <!-- Always visible buttons -->
       <div class="nav-actions">
         <a class="btn" href="#">Login</a>
         <a class="btn primary" href="#">Join Us →</a>
@@ -33,7 +38,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section id="hero">
     <div class="container hero-container">
       <div class="hero-text">
@@ -47,29 +51,25 @@
       </div>
       <div class="hero-visuals">
         <div class="hero-image">
-          <img src="img/none.png"Professional medical team" class="main-img" />
-         
+          <img src="img/none.png" alt="Professional medical team" class="main-img" />
         </div>
       </div>
     </div>
   </section>
 
- <!--- online appoinments-->
- <section class="appointment container">
+  <section class="appointment container">
     <p class="section-label">Practise Advice</p>
-    <h2>Online Appoinments</h2>
+    <h2>Online Appointments</h2>
     <p class="section-description">Problems trying to resolve the conflict between <br> the two major realms of Classical physics: Newtonian mechanics</p>
-   
-    <div class="card-container">
-<div class="card">
-    <img src="img/ecg_heart_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Emergency">
-    <h3>Emergency Case</h3>
 
-<p>The gradual accumulation of information about</p>
-     
-    </div>
-    
- <div class="card">
+    <div class="card-container">
+      <div class="card">
+        <img src="img/ecg_heart_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Emergency">
+        <h3>Emergency Case</h3>
+        <p>The gradual accumulation of information about</p>
+      </div>
+
+      <div class="card">
         <img src="img/health_and_safety_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Cancer">
         <h3>Cancer Care</h3>
         <p>The gradual accumulation of information about</p>
@@ -83,23 +83,17 @@
         <img src="img/stethoscope_check_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png" alt="Book">
         <h3>Book Now</h3>
         <p>The gradual accumulation of information about</p>
-        </div>
-
-
-        
       </div>
     </div>
   </section>
-<section class="doctors-section">
+
+  <section class="doctors-section">
     <div class="container">
-      
-
       <div class="doctor-grid">
+        </div>
+    </div>
+  </section>
 
-    
-
-
-   <!-- Advice Section -->
   <section id="advice">
     <div class="advice-container">
       <p class="advice-tag">Practice Advice</p>
@@ -108,8 +102,7 @@
 
       <div class="cards">
 
-        <!-- Card 1 -->
-        <div class="card">
+        <div class="advice-card">
           <div class="card-img">
             <img src="./img/daef6d1a3d37f4450f26fbd8dc0bdef7b8e28a2c.jpg" alt="Health Query">
             <div class="badge">Sale</div>
@@ -126,12 +119,11 @@
             <p class="sales"><i class="fa-solid fa-download"></i> 15 Sales</p>
             <p class="price">$16.48 <span class="discount">$6.48</span></p>
             <a href="#" class="learn-btn">Learn More > </a>
-            <div class="rating"><i class="star   fa-solid fa-star"></i> 4.9</div>
+            <div class="rating"><i class="star fa-solid fa-star"></i> 4.9</div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card">
+        <div class="advice-card">
           <div class="card-img">
             <img src="./img/d9ad0c704572175af85c50f8ba20c80572fa3cce.jpg" alt="Book Now">
             <div class="badge">Sale</div>
@@ -148,12 +140,11 @@
             <p class="sales"><i class="fa-solid fa-download"></i> 15 Sales</p>
             <p class="price">$16.48 <span class="discount">$6.48</span></p>
             <a href="#" class="learn-btn">Learn More > </a>
-            <div class="rating"><i class="star   fa-solid fa-star"></i> 4.9</div>
+            <div class="rating"><i class="star fa-solid fa-star"></i> 4.9</div>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card">
+        <div class="advice-card">
           <div class="card-img">
             <img src="./img/76c008b352630ca1c8a0c8a471193a94ef830e07.jpg" alt="Online Appointment">
             <div class="badge">Sale</div>
@@ -170,13 +161,11 @@
             <p class="sales"><i class="fa-solid fa-download"></i> 15 Sales</p>
             <p class="price">$16.48 <span class="discount">$6.48</span></p>
             <a href="#" class="learn-btn">Learn More > </a>
-            <div class="rating"><i class="star   fa-solid fa-star"></i> 4.9</div>
+            <div class="rating"><i class="star fa-solid fa-star"></i> 4.9</div>
           </div>
         </div>
 
-
-<!-- Card 4 -->
-        <div class="card">
+        <div class="advice-card">
           <div class="card-img">
             <img src="./img/38fb0a20a9d1067ef468ee102dbd761c20429662.jpg" alt="Book Now">
             <div class="badge">Sale</div>
@@ -193,17 +182,202 @@
             <p class="sales"><i class="fa-solid fa-download"></i> 15 Sales</p>
             <p class="price">$16.48 <span class="discount">$6.48</span></p>
             <a href="#" class="learn-btn">Learn More > </a>
-            <div class="rating"><i class="star   fa-solid fa-star"></i> 4.9</div>
+            <div class="rating"><i class="star fa-solid fa-star"></i> 4.9</div>
           </div>
         </div>
-
-
-
-
-  
-
-
-
       </div>
     </div>
   </section>
+  
+<section class="reference-section">
+  <div class="container reference-content">
+    <div class="main-img">
+      <img src="img/col-md-6.png" alt="patient image">
+      
+    </div>
+
+<div class="text-box">
+  <div class="red-line"></div>
+  <h2 class="title">The Best <br>Reference</h2>
+  <p class="description">Problems trying to resolve the conflict between <br />
+          the two major realms of Classical physics: <br />
+          Newtonian mechanics</p>
+
+ <a href="#" class="learn-more">
+          Learn More <i class="fas fa-arrow-right"></i>
+        </a>
+</div>
+    
+  </div>
+  </section>
+   
+<section class="pricing-section">
+  <div class="container">
+    <p class="pricing-tag">Practice Advice</p>
+    <h2 class="pricing-title">Pricing</h2>
+    <p class="pricing-subtext">
+      Problems trying to resolve the conflict between<br />
+      the two major realms of Classical physics: Newtonian mechanics
+    </p>
+
+    <div class="pricing-cards">
+      <!-- Pricing Card 1 -->
+      <div class="pricing-card">
+        <div class="icon"><i class="fas fa-heart"></i></div>
+        <h3>FREE</h3>
+        <p>Organize across all apps by hand</p>
+        <h2 class="price">19$<span>/ Per Month</span></h2>
+        <p class="note">Slate helps you see how many more days you need...</p>
+        <button class="btn">Try for Free</button>
+        <ul class="features">
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-times-circle grey"></i> 1GB Cloud storage</li>
+          <li><i class="fas fa-times-circle grey"></i> Email and community support</li>
+        </ul>
+      </div>
+
+
+     <!-- Pricing Card 2 with "New" badge -->
+      <div class="pricing-card highlight">
+        <span class="badge">New</span>
+        <div class="icon"><i class="fas fa-heart"></i></div>
+        <h3>FREE</h3>
+        <p>Organize across all apps by hand</p>
+        <h2 class="price">19$<span>/ Per Month</span></h2>
+        <p class="note">Slate helps you see how many more days you need...</p>
+        <button class="btn">Try for Free</button>
+        <ul class="features">
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-times-circle grey"></i> 1GB Cloud storage</li>
+          <li><i class="fas fa-times-circle grey"></i> Email and community support</li>
+        </ul>
+      </div>
+
+ <!-- Pricing Card 3 -->
+      <div class="pricing-card">
+        <div class="icon"><i class="fas fa-heart"></i></div>
+        <h3>FREE</h3>
+        <p>Organize across all apps by hand</p>
+        <h2 class="price">19$<span>/ Per Month</span></h2>
+        <p class="note">Slate helps you see how many more days you need...</p>
+        <button class="btn">Try for Free</button>
+        <ul class="features">
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-check-circle green"></i> Unlimited product updates</li>
+          <li><i class="fas fa-times-circle grey"></i> 1GB Cloud storage</li>
+          <li><i class="fas fa-times-circle grey"></i> Email and community support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+   
+
+  <section class="testimonials-section">
+  <div class="container">
+    <p class="testimonials-tag">Testimonials</p>
+    <h2 class="testimonials-title">Our Experts</h2>
+    <p class="testimonials-subtext">Problems trying to resolve the conflict between the two major realms...</p>
+<div class="experts">
+      <div class="expert-card">
+        <img src="img/o.png" alt="Expert 1">
+        <p class="expert-text">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+        <div class="stars">★★★★★</div>
+        <p class="expert-name">Regina Miles</p>
+        <p class="expert-role">Designer</p>
+      </div>
+      <div class="expert-card">
+        <img src="img/y.png" alt="Expert 2">
+        <p class="expert-text">Slate helps you see how many more days you need to work to reach your financial goal.</p>
+        <div class="stars">★★★★★</div>
+        <p class="expert-name">Regina Miles</p>
+        <p class="expert-role">Designer</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="newsletter-section" >
+  <div class="container">
+    <p class="newsletter-tag">Newsletter</p>
+     <h2 class="newsletter-title">JOIN US</h2>
+    <p class="newsletter-subtext">roblems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
+    </p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Your Email" />
+      <button type="submit">Subscribe</button>
+      </form>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Company Info</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Carrier</li>
+        <li>We are hiring</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+ <div class="footer-column">
+      <h4>Legal</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Carrier</li>
+        <li>We are hiring</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Features</h4>
+      <ul>
+        <li>Business Marketing</li>
+        <li>User Analytic</li>
+        <li>Live Chat</li>
+        <li>Unlimited Support</li>
+      </ul>
+    </div>
+
+     <div class="footer-column">
+      <h4>Resources</h4>
+      <ul>
+        <li>IOS & Android</li>
+        <li>Watch a Demo</li>
+        <li>Customers</li>
+        <li>API</li>
+      </ul>
+    </div>
+     <div class="footer-column">
+      <h4>Get In Touch</h4>
+      <ul class="contact-info">
+        <li><i class="fas fa-phone-alt"></i> (480) 555-0103</li>
+        <li><i class="fas fa-map-marker-alt"></i> 4517 Washington Ave. Manchester, Kentucky 39495</li>
+        <li><i class="fas fa-envelope"></i> debra.holt@example.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Made With Love By Figmaland All Right Reserved</p>
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
